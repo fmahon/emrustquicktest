@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "cortex-debug",
+            "gdbpath":"gdb-multiarch",
+            "request": "launch",
+            "servertype": "openocd",
+            "cwd": "${workspaceRoot}",
+            "executable": "./target/thumbv7em-none-eabihf/debug/examples/hello",
+            "name": "Debug (OpenOCD)",
+            "device": "STM32L432KC",
+            "configFiles": [
+                "interface/stlink-v2-1.cfg",
+                "target/stm32l4x.cfg"
+            ],
+            "svdFile": "${workspaceRoot}/STM32L4x2.svd",
+            "runToMain": true
+        }
+    ]
+}
